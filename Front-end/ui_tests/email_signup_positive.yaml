@@ -1,0 +1,56 @@
+appId: host.exp.Exponent
+---
+# screen 1
+- tapOn:
+    text: "or use E-mail"
+- waitForAnimationToEnd
+- tapOn:
+    point: "60%,81%"
+
+# screen 2
+- scrollUntilVisible:
+    element:
+      id: "nickname_input_text"
+    direction: UP # DOWN|UP|LEFT|RIGHT (optional, default: DOWN)
+    speed: 20 # 0-100 (optional, default: 40) Scroll speed. Higher values scroll faster.
+- tapOn:
+    id: "nickname_input_text"
+- eraseText: 50
+- inputRandomPersonName
+- hideKeyboard
+
+- tapOn:
+    id: "phone_input_text"
+- eraseText: 50
+- inputRandomNumber
+- hideKeyboard
+
+- tapOn:
+    id: "email_input_text"
+- eraseText: 50
+- inputRandomEmail
+- hideKeyboard
+
+- tapOn:
+    id: "password_input_text"
+- eraseText: 50
+- inputText: "password1."
+- hideKeyboard
+
+- scrollUntilVisible:
+    element:
+      id: "con_password_input_text"
+    speed: 20
+- tapOn:
+    id: "con_password_input_text"
+- eraseText: 50
+- inputText: "password1."
+- hideKeyboard
+
+- tapOn: "SIGN UP"
+
+# screen 3
+- scroll
+- scroll
+- tapOn: "AGREE"
+- assertVisible: "succeeded!"

@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Fish-AI",
+    "slug": "Fish-AI",
+    "version": "2.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "no.paral.fishai",
+    "splash": {
+      "image": "./assets/splashScreen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#7DB6EB"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "no.paral.fishai",
+      "buildNumber": "3",
+      "supportsTablet": true,
+      "config": {
+        "usesNonExemptEncryption": false,
+        "googleMapsApiKey": "AIzaSyAortWjkHaP5IgMFnCAruLWHMSpAC0e2cY"
+      }
+    },
+    "android": {
+      "package": "no.paral.fishai",
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBU9uwqm2u9bu6e9ksDycgNbYuy0U51rLM"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e6f034c0-de6c-4aa8-b552-9f10ce13b87f"
+      },
+      "googleAuth": {
+        "expoClientId": "220432357509-pqi7g9e9edhhekrvspr4kl0pbcfbhb42.apps.googleusercontent.com",
+        "androidClientId": "220432357509-b98ss642iuijnl0fslulkqgku0vmuiam.apps.googleusercontent.com",
+        "iosClientId": "220432357509-8rg44tk1ppgopl9ui1hgg5jnc0abvckp.apps.googleusercontent.com"
+      }
+    }
+  }
+}

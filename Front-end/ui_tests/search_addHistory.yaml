@@ -1,0 +1,15 @@
+appId: host.exp.Exponent
+---
+- tapOn: "search"
+- assertVisible:
+    text: "Coordinates"
+    index: 0
+- tapOn:
+    id: "latitude"
+    index: 0
+- tapOn: "Add to History"
+- tapOn: "SAVE"
+# if search button is visible that means every thing went as intended.
+- assertVisible: "search"
+
+

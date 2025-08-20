@@ -1,0 +1,18 @@
+appId: host.exp.Exponent
+---
+- tapOn: "or use E-mail"
+- waitForAnimationToEnd
+- tapOn:
+    id: "email_input_text"
+- eraseText: 50
+- inputText: ${EMAIL}
+- hideKeyboard
+- tapOn:
+    id: "password_input_text"
+- eraseText: 50
+- inputText: ${PASSWORD}
+- pressKey: Enter
+- extendedWaitUntil:
+    visible: "SIGN IN"
+    timeout: 5000
+- tapOn: "SIGN IN"

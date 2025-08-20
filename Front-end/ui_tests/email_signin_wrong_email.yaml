@@ -1,0 +1,27 @@
+appId: host.exp.Exponent
+---
+- tapOn: "or use E-mail"
+- waitForAnimationToEnd
+- tapOn:
+    id: "email_input_text"
+- eraseText: 50
+- inputRandomEmail
+- tapOn:
+    id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+    index: 52
+- scrollUntilVisible:
+    element:
+      id: "password_input_text"
+    speed: 10
+- tapOn:
+    id: "password_input_text"
+- eraseText: 50
+- inputRandomText
+- tapOn:
+    id: "com.google.android.inputmethod.latin:id/0_resource_name_obfuscated"
+    index: 37
+- extendedWaitUntil:
+    visible: "SIGN IN"
+    timeout: 5000
+- tapOn: "SIGN IN"
+- assertVisible: "wrong email!"

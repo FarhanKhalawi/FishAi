@@ -1,0 +1,30 @@
+appId: host.exp.Exponent
+---
+- tapOn:
+    point: "8%,5%"
+- assertVisible: "History"
+- assertVisible: "About"
+- assertVisible: "Logout"
+
+- tapOn:
+    point: "34%,8%"
+- assertVisible: "Profile"
+
+- tapOn:
+    point: "6%,6%"
+
+- tapOn: "History"
+- assertVisible: "History"
+
+- tapOn:
+    point: "6%,6%"
+
+- tapOn: "About"
+- assertVisible: "About"
+
+- tapOn:
+    point: "6%,6%"
+
+- tapOn:
+    point: "80%,50%"
+- assertVisible: "Fish smarter, not harder ;-)"
