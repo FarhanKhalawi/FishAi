@@ -1,0 +1,22 @@
+version: "3.11"
+
+services:
+ backend:
+   build: .
+   container_name: api
+   expose:
+    - 8000
+ caddy:
+  image: caddy:2.6.4
+  restart: unless-stopped
+  ports:
+   - "80:80"
+   - "443:443"
+  volumes:
+   - ./data/Caddyfile:/etc/caddy/Caddyfile
+   - ./data/data:/data
+   - ./data/config:/config
+
+networks:
+   default:
+     name: public
